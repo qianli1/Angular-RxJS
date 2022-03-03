@@ -37,7 +37,6 @@ export class ProductService {
   private productSelectedSubject = new BehaviorSubject<number>(0);
   productSelectedAction$ = this.productSelectedSubject.asObservable();
 
-
   selectedProducts$ = combineLatest([
     this.productsWithCategory$,
     this.productSelectedAction$
